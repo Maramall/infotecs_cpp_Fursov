@@ -97,7 +97,7 @@ pr1: CMakeFiles/pr1.dir/prog_one/prog1.cpp.o
 pr1: CMakeFiles/pr1.dir/build.make
 pr1: CMakeFiles/pr1.dir/compiler_depend.ts
 pr1: libLib.so
-pr1: libto_socket.so
+pr1: libSockets.so
 pr1: CMakeFiles/pr1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable pr1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pr1.dir/link.txt --verbose=$(VERBOSE)

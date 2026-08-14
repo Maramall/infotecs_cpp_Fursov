@@ -6,13 +6,15 @@
 #include <unistd.h>
 
 class Socket{
-    int inf_socket = socket(AF_INET, SOCK_STREAM, 0);
+    protected:
+    int adr_socket = socket(AF_INET, SOCK_STREAM, 0);
     sockaddr_in serverAddress;
    public: 
-    Socket(bool is_client);
-    
-    void listen_s();
-    void send_s();
-    
+    Socket();
+       
     ~Socket();
 }; 
+
+
+
+    

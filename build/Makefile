@@ -137,17 +137,17 @@ Lib/fast:
 .PHONY : Lib/fast
 
 #=============================================================================
-# Target rules for targets named to_socket
+# Target rules for targets named Sockets
 
 # Build rule for target.
-to_socket: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 to_socket
-.PHONY : to_socket
+Sockets: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Sockets
+.PHONY : Sockets
 
 # fast build rule for target.
-to_socket/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_socket.dir/build.make CMakeFiles/to_socket.dir/build
-.PHONY : to_socket/fast
+Sockets/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/build
+.PHONY : Sockets/fast
 
 #=============================================================================
 # Target rules for targets named pr1
@@ -223,6 +223,78 @@ prog_one/prog1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr1.dir/build.make CMakeFiles/pr1.dir/prog_one/prog1.cpp.s
 .PHONY : prog_one/prog1.cpp.s
 
+src/Sockets/BaseSocket.o: src/Sockets/BaseSocket.cpp.o
+.PHONY : src/Sockets/BaseSocket.o
+
+# target to build an object file
+src/Sockets/BaseSocket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/src/Sockets/BaseSocket.cpp.o
+.PHONY : src/Sockets/BaseSocket.cpp.o
+
+src/Sockets/BaseSocket.i: src/Sockets/BaseSocket.cpp.i
+.PHONY : src/Sockets/BaseSocket.i
+
+# target to preprocess a source file
+src/Sockets/BaseSocket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/src/Sockets/BaseSocket.cpp.i
+.PHONY : src/Sockets/BaseSocket.cpp.i
+
+src/Sockets/BaseSocket.s: src/Sockets/BaseSocket.cpp.s
+.PHONY : src/Sockets/BaseSocket.s
+
+# target to generate assembly for a file
+src/Sockets/BaseSocket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/src/Sockets/BaseSocket.cpp.s
+.PHONY : src/Sockets/BaseSocket.cpp.s
+
+src/Sockets/ListenSocket.o: src/Sockets/ListenSocket.cpp.o
+.PHONY : src/Sockets/ListenSocket.o
+
+# target to build an object file
+src/Sockets/ListenSocket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/src/Sockets/ListenSocket.cpp.o
+.PHONY : src/Sockets/ListenSocket.cpp.o
+
+src/Sockets/ListenSocket.i: src/Sockets/ListenSocket.cpp.i
+.PHONY : src/Sockets/ListenSocket.i
+
+# target to preprocess a source file
+src/Sockets/ListenSocket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/src/Sockets/ListenSocket.cpp.i
+.PHONY : src/Sockets/ListenSocket.cpp.i
+
+src/Sockets/ListenSocket.s: src/Sockets/ListenSocket.cpp.s
+.PHONY : src/Sockets/ListenSocket.s
+
+# target to generate assembly for a file
+src/Sockets/ListenSocket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/src/Sockets/ListenSocket.cpp.s
+.PHONY : src/Sockets/ListenSocket.cpp.s
+
+src/Sockets/SenderSocket.o: src/Sockets/SenderSocket.cpp.o
+.PHONY : src/Sockets/SenderSocket.o
+
+# target to build an object file
+src/Sockets/SenderSocket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/src/Sockets/SenderSocket.cpp.o
+.PHONY : src/Sockets/SenderSocket.cpp.o
+
+src/Sockets/SenderSocket.i: src/Sockets/SenderSocket.cpp.i
+.PHONY : src/Sockets/SenderSocket.i
+
+# target to preprocess a source file
+src/Sockets/SenderSocket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/src/Sockets/SenderSocket.cpp.i
+.PHONY : src/Sockets/SenderSocket.cpp.i
+
+src/Sockets/SenderSocket.s: src/Sockets/SenderSocket.cpp.s
+.PHONY : src/Sockets/SenderSocket.s
+
+# target to generate assembly for a file
+src/Sockets/SenderSocket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/src/Sockets/SenderSocket.cpp.s
+.PHONY : src/Sockets/SenderSocket.cpp.s
+
 src/lib.o: src/lib.cpp.o
 .PHONY : src/lib.o
 
@@ -247,30 +319,6 @@ src/lib.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Lib.dir/build.make CMakeFiles/Lib.dir/src/lib.cpp.s
 .PHONY : src/lib.cpp.s
 
-src/to_socket.o: src/to_socket.cpp.o
-.PHONY : src/to_socket.o
-
-# target to build an object file
-src/to_socket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_socket.dir/build.make CMakeFiles/to_socket.dir/src/to_socket.cpp.o
-.PHONY : src/to_socket.cpp.o
-
-src/to_socket.i: src/to_socket.cpp.i
-.PHONY : src/to_socket.i
-
-# target to preprocess a source file
-src/to_socket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_socket.dir/build.make CMakeFiles/to_socket.dir/src/to_socket.cpp.i
-.PHONY : src/to_socket.cpp.i
-
-src/to_socket.s: src/to_socket.cpp.s
-.PHONY : src/to_socket.s
-
-# target to generate assembly for a file
-src/to_socket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_socket.dir/build.make CMakeFiles/to_socket.dir/src/to_socket.cpp.s
-.PHONY : src/to_socket.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -281,21 +329,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Lib"
+	@echo "... Sockets"
 	@echo "... pr1"
 	@echo "... pr2"
-	@echo "... to_socket"
 	@echo "... prog2/prog2.o"
 	@echo "... prog2/prog2.i"
 	@echo "... prog2/prog2.s"
 	@echo "... prog_one/prog1.o"
 	@echo "... prog_one/prog1.i"
 	@echo "... prog_one/prog1.s"
+	@echo "... src/Sockets/BaseSocket.o"
+	@echo "... src/Sockets/BaseSocket.i"
+	@echo "... src/Sockets/BaseSocket.s"
+	@echo "... src/Sockets/ListenSocket.o"
+	@echo "... src/Sockets/ListenSocket.i"
+	@echo "... src/Sockets/ListenSocket.s"
+	@echo "... src/Sockets/SenderSocket.o"
+	@echo "... src/Sockets/SenderSocket.i"
+	@echo "... src/Sockets/SenderSocket.s"
 	@echo "... src/lib.o"
 	@echo "... src/lib.i"
 	@echo "... src/lib.s"
-	@echo "... src/to_socket.o"
-	@echo "... src/to_socket.i"
-	@echo "... src/to_socket.s"
 .PHONY : help
 
 

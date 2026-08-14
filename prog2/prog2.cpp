@@ -1,11 +1,11 @@
 #include "../include/lib.h"
-#include "../include/to_socket.h"
+#include "../include/Sockets/SenderSocket.h"
 #include <string>
 
 
 
 int main(){
-    Socket client(true);
+    SenderSocket client;
 
     std::string sr = "He12llo44";
     sort_and_replace(sr);

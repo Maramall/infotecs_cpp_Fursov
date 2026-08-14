@@ -55,7 +55,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Lib.dir/DependInfo.cmake"
-  "CMakeFiles/to_socket.dir/DependInfo.cmake"
+  "CMakeFiles/Sockets.dir/DependInfo.cmake"
   "CMakeFiles/pr1.dir/DependInfo.cmake"
   "CMakeFiles/pr2.dir/DependInfo.cmake"
   )

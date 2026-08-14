@@ -4,7 +4,7 @@ pr1: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
   CMakeFiles/pr1.dir/prog_one/prog1.cpp.o \
   libLib.so \
-  libto_socket.so \
+  libSockets.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
@@ -43,7 +43,7 @@ CMakeFiles/pr1.dir/prog_one/prog1.cpp.o:
 
 libLib.so:
 
-libto_socket.so:
+libSockets.so:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so:
 

@@ -64,14 +64,14 @@ CMAKE_BINARY_DIR = /home/mral/Documents/cpp/infotecs_cpp_Fursov/build
 
 # The main recursive "all" target.
 all: CMakeFiles/Lib.dir/all
-all: CMakeFiles/to_socket.dir/all
+all: CMakeFiles/Sockets.dir/all
 all: CMakeFiles/pr1.dir/all
 all: CMakeFiles/pr2.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/Lib.dir/codegen
-codegen: CMakeFiles/to_socket.dir/codegen
+codegen: CMakeFiles/Sockets.dir/codegen
 codegen: CMakeFiles/pr1.dir/codegen
 codegen: CMakeFiles/pr2.dir/codegen
 .PHONY : codegen
@@ -82,7 +82,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Lib.dir/clean
-clean: CMakeFiles/to_socket.dir/clean
+clean: CMakeFiles/Sockets.dir/clean
 clean: CMakeFiles/pr1.dir/clean
 clean: CMakeFiles/pr2.dir/clean
 .PHONY : clean
@@ -120,51 +120,51 @@ CMakeFiles/Lib.dir/clean:
 .PHONY : CMakeFiles/Lib.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/to_socket.dir
+# Target rules for target CMakeFiles/Sockets.dir
 
 # All Build rule for target.
-CMakeFiles/to_socket.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_socket.dir/build.make CMakeFiles/to_socket.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_socket.dir/build.make CMakeFiles/to_socket.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=7,8 "Built target to_socket"
-.PHONY : CMakeFiles/to_socket.dir/all
+CMakeFiles/Sockets.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=3,4,5,6 "Built target Sockets"
+.PHONY : CMakeFiles/Sockets.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/to_socket.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/to_socket.dir/all
+CMakeFiles/Sockets.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Sockets.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles 0
-.PHONY : CMakeFiles/to_socket.dir/rule
+.PHONY : CMakeFiles/Sockets.dir/rule
 
 # Convenience name for target.
-to_socket: CMakeFiles/to_socket.dir/rule
-.PHONY : to_socket
+Sockets: CMakeFiles/Sockets.dir/rule
+.PHONY : Sockets
 
 # codegen rule for target.
-CMakeFiles/to_socket.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_socket.dir/build.make CMakeFiles/to_socket.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=7,8 "Finished codegen for target to_socket"
-.PHONY : CMakeFiles/to_socket.dir/codegen
+CMakeFiles/Sockets.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=3,4,5,6 "Finished codegen for target Sockets"
+.PHONY : CMakeFiles/Sockets.dir/codegen
 
 # clean rule for target.
-CMakeFiles/to_socket.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/to_socket.dir/build.make CMakeFiles/to_socket.dir/clean
-.PHONY : CMakeFiles/to_socket.dir/clean
+CMakeFiles/Sockets.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Sockets.dir/build.make CMakeFiles/Sockets.dir/clean
+.PHONY : CMakeFiles/Sockets.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/pr1.dir
 
 # All Build rule for target.
 CMakeFiles/pr1.dir/all: CMakeFiles/Lib.dir/all
-CMakeFiles/pr1.dir/all: CMakeFiles/to_socket.dir/all
+CMakeFiles/pr1.dir/all: CMakeFiles/Sockets.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr1.dir/build.make CMakeFiles/pr1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr1.dir/build.make CMakeFiles/pr1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=3,4 "Built target pr1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=7,8 "Built target pr1"
 .PHONY : CMakeFiles/pr1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pr1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pr1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles 0
 .PHONY : CMakeFiles/pr1.dir/rule
@@ -176,7 +176,7 @@ pr1: CMakeFiles/pr1.dir/rule
 # codegen rule for target.
 CMakeFiles/pr1.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr1.dir/build.make CMakeFiles/pr1.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=3,4 "Finished codegen for target pr1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=7,8 "Finished codegen for target pr1"
 .PHONY : CMakeFiles/pr1.dir/codegen
 
 # clean rule for target.
@@ -189,15 +189,15 @@ CMakeFiles/pr1.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/pr2.dir/all: CMakeFiles/Lib.dir/all
-CMakeFiles/pr2.dir/all: CMakeFiles/to_socket.dir/all
+CMakeFiles/pr2.dir/all: CMakeFiles/Sockets.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr2.dir/build.make CMakeFiles/pr2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr2.dir/build.make CMakeFiles/pr2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=5,6 "Built target pr2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=9,10 "Built target pr2"
 .PHONY : CMakeFiles/pr2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pr2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pr2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles 0
 .PHONY : CMakeFiles/pr2.dir/rule
@@ -209,7 +209,7 @@ pr2: CMakeFiles/pr2.dir/rule
 # codegen rule for target.
 CMakeFiles/pr2.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pr2.dir/build.make CMakeFiles/pr2.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=5,6 "Finished codegen for target pr2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles --progress-num=9,10 "Finished codegen for target pr2"
 .PHONY : CMakeFiles/pr2.dir/codegen
 
 # clean rule for target.

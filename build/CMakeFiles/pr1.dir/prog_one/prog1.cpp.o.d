@@ -115,7 +115,8 @@ CMakeFiles/pr1.dir/prog_one/prog1.cpp.o: \
  /usr/include/c++/15.2.1/bits/stl_tempbuf.h \
  /usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h \
  /usr/include/c++/15.2.1/pstl/execution_defs.h \
- /home/mral/Documents/cpp/infotecs_cpp_Fursov/prog_one/../include/to_socket.h \
+ /home/mral/Documents/cpp/infotecs_cpp_Fursov/prog_one/../include/Sockets/ListenSocket.h \
+ /home/mral/Documents/cpp/infotecs_cpp_Fursov/prog_one/../include/Sockets/BaseSocket.h \
  /usr/include/c++/15.2.1/cstring /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/15.2.1/iostream \
  /usr/include/c++/15.2.1/ostream /usr/include/c++/15.2.1/bits/ostream.h \
