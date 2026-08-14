@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -Wl,--dependency-file=CMakeFiles/to_socket.dir/link.d -shared -Wl,-soname,libto_socket.so -o libto_socket.so CMakeFiles/to_socket.dir/src/to_socket.cpp.o
