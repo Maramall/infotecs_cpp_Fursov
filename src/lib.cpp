@@ -1,19 +1,22 @@
-#include "lib.h"
+#include "../include/lib.h"
+#include <iostream>
 
 void sort_and_replace(std::string & str){
+    
 sort(str.rbegin(), str.rend());
-{int b = str.size();
-for(int i = 1; i < b; i+=2){
+    
+for(int i = 1; i < str.size(); i+=1){
     str.erase(str.begin()+i);
 }
 
-for(int i = 1; i < b; i+=2){
-    str.append("KB", i);
+for(int i = 1; i < str.size(); i+=3){
+    str.insert(i,"KB");
+   
 }
 
 }
+   
 
-}
 int64_t sum_elems(const std::string &str){
     bool start_digit = false;
     int64_t sum = 0;
@@ -33,8 +36,10 @@ int64_t sum_elems(const std::string &str){
             cur_num = 0;
         }
     }
+    sum += cur_num;
     return sum;
 }
+
 bool more_2_sym_and_32(const std::string &str){
     if(str.size() > 2){
         if(sum_elems(str) % 32 == 0){

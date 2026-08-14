@@ -5,13 +5,12 @@
 
 
 int main(){
-    Socket server(false);
+    Socket client(true);
 
     std::string sr = "He12llo44";
     sort_and_replace(sr);
-    while(1){
-        server.listen_s();
-    }
-   // std::cout << sum_elems(sr) << "\n" << sr;
+    client.send_s();
+    
+ //   std::cout << sum_elems(sr) << "\n" << sr;
 
 }
