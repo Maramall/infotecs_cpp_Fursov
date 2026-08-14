@@ -1,6 +1,0 @@
-/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles/Lib.dir
-/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles/Sockets.dir
-/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles/pr1.dir
-/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles/pr2.dir
-/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles/edit_cache.dir
-/home/mral/Documents/cpp/infotecs_cpp_Fursov/build/CMakeFiles/rebuild_cache.dir
