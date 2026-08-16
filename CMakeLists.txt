@@ -8,7 +8,7 @@ project(Fursov_test) #дает имя проекту
 add_library(Lib SHARED src/lib.cpp)
 add_library(Sockets SHARED src/Sockets/BaseSocket.cpp src/Sockets/ListenSocket.cpp src/Sockets/SenderSocket.cpp)
 
-add_executable(pr1 prog_one/prog1.cpp) 
+add_executable(pr1 prog1/prog1.cpp) 
 target_link_libraries(pr1 Lib Sockets)
 
 add_executable(pr2 prog2/prog2.cpp) 

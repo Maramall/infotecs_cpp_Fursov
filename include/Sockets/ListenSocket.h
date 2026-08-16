@@ -1,8 +1,9 @@
 #include "BaseSocket.h"
 class ListenSocket : Socket{
+    bool is_listening = false;
 public:
     ListenSocket();
-    void listen_s();
+    std::string listen_s();
     ~ListenSocket();
  
 };
