@@ -2,14 +2,19 @@
 
 ListenSocket::ListenSocket() {
    
-    bind(adr_socket, (struct sockaddr*)&serverAddress, sizeof(serverAddress));
+
     
 }
 
-std::string  ListenSocket::listen_s(){
-   int l = listen(adr_socket, 5);
-   //std::cout << "res of listen: " << l << "\n"; 
-   int clientSocket = accept(adr_socket, nullptr, nullptr);
+int ListenSocket::l_connect()
+{
+    return bind(adr_socket, (struct sockaddr*)&serverAddress, sizeof(serverAddress));
+}
+std::string ListenSocket::listen_s()
+{
+    int l = listen(adr_socket, 5);
+    // std::cout << "res of listen: " << l << "\n";
+    int clientSocket = accept(adr_socket, nullptr, nullptr);
     if(clientSocket != -1){
       //  std::cout << "start listening in " << clientSocket << "\n";
         char buffer[1024] = { 0 };

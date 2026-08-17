@@ -1,12 +1,17 @@
 #include "../include/lib.h"
 #include "../include/Sockets/SenderSocket.h"
+
 #include <vector>
 
 #include <mutex>
-#include <pthread.h>
-    std::vector<std::string> buffer;
-    std::mutex mtx;
+#include <condition_variable>
+#include <thread>
 
+
+std::vector<std::string> buffer;
+    std::mutex mtx;
+    std::condition_variable to_sec_thr;
+    bool send_to_cv = false;
 bool is_only_digit_and_len_less_64(const std::string &str){
 
     if(str.size() > 64)
@@ -28,45 +33,36 @@ void* first_thread(void* args){
             {
                 std::lock_guard<std::mutex> lock_buffer(mtx);
                 buffer.push_back(sr);
+                send_to_cv = true;
             }
-           
+            to_sec_thr.notify_one();
            // std::cout << "buffer size is: " << buffer.size() << "\n";
         }
     }
 }
 
 void* second_thread(void* args){
-    bool for_error = true;
+    bool for_error = false;
     int to_prog2 = 0; 
+    SenderSocket client;
    while(true){
-    
-        if(buffer.size()){
-            
-            if(for_error){
-            
-                std::lock_guard<std::mutex> lock_buffer(mtx);
+        std::unique_lock<std::mutex> ul(mtx);
+        to_sec_thr.wait(ul, [](){return send_to_cv;});
+        do{
+            if(!for_error){
                 std::string from_buffer = buffer[buffer.size()-1];        
                 //std::cout << from_buffer;
                 to_prog2 = sum_elems(from_buffer);
               
             }
-            try{
-                SenderSocket client;
-                client.send_s(to_prog2);
-                
-                std::lock_guard<std::mutex> lock_buffer(mtx);
-                buffer.pop_back();
-                for_error = true;
-                
-
-            }
-            catch(std::logic_error& msg){
-                if(for_error){
-                    std::cerr << msg.what() << '\n';
-                    for_error = false;
+               for_error = client.s_connect();
+                if(!for_error){
+                    client.send_s(to_prog2);
+                    buffer.pop_back();
                 }
-            }
-        }
+        
+        
+        }while(buffer.size() && !for_error);
     }
 }
 

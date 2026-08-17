@@ -2,6 +2,7 @@
 class SenderSocket : Socket{
     public:
     SenderSocket();
-    void send_s(int to_send);
+    int s_connect();
+    int send_s(int to_send);
     ~SenderSocket();
 };
