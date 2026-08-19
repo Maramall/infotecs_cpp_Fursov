@@ -25,17 +25,18 @@ bool is_only_digit_and_len_less_64(const std::string &str){
 
 void* first_thread(void* args){
     while(true){
-        std::string sr = "\0";  
+        std::string sr = "\0";
+        send_to_cv = true;  
+        to_sec_thr.notify_one();
         std::cin >> sr;
         if(is_only_digit_and_len_less_64(sr)){
             sort_and_replace(sr);
-          
-            {
-                std::lock_guard<std::mutex> lock_buffer(mtx);
+                send_to_cv = false;
+                std::unique_lock<std::mutex> lock_buffer(mtx);
+            
                 buffer.push_back(sr);
                 send_to_cv = true;
-            }
-            to_sec_thr.notify_one();
+                to_sec_thr.notify_one();
            // std::cout << "buffer size is: " << buffer.size() << "\n";
         }
     }
@@ -46,23 +47,21 @@ void* second_thread(void* args){
     int to_prog2 = 0; 
     SenderSocket client;
    while(true){
+        
         std::unique_lock<std::mutex> ul(mtx);
         to_sec_thr.wait(ul, [](){return send_to_cv;});
-        do{
-            if(!for_error){
-                std::string from_buffer = buffer[buffer.size()-1];        
-                //std::cout << from_buffer;
-                to_prog2 = sum_elems(from_buffer);
-              
-            }
-               for_error = client.s_connect();
-                if(!for_error){
-                    client.send_s(to_prog2);
-                    buffer.pop_back();
-                }
         
-        
-        }while(buffer.size() && !for_error);
+        if (!client.connect_s()){
+                if(buffer.size()){
+                        std::string from_buffer = buffer[buffer.size()-1];        
+                        to_prog2 = sum_elems(from_buffer);
+
+                    if(client.send_s(to_prog2) != -1){
+                        buffer.pop_back();                    
+                    }
+            } 
+        }
+        send_to_cv = false;
     }
 }
 

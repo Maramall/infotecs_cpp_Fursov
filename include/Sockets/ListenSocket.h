@@ -1,6 +1,6 @@
 #include "BaseSocket.h"
 class ListenSocket : Socket{
-    bool is_listening = false;
+    int clientSocket = -1;
 public:
     ListenSocket();
     int l_connect();

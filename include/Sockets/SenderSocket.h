@@ -1,8 +1,9 @@
 #include "BaseSocket.h"
 class SenderSocket : Socket{
+    bool connected = false;
     public:
     SenderSocket();
-    int s_connect();
+    int connect_s();
     int send_s(int to_send);
     ~SenderSocket();
 };

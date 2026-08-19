@@ -4,21 +4,41 @@ SenderSocket::SenderSocket() {
    
 }
 
-int SenderSocket::s_connect()
+int SenderSocket::connect_s()
 {
-    return connect(adr_socket, (struct sockaddr*)&serverAddress, sizeof(serverAddress));
-        
+    if(!connected){
+        if( (connect(adr_socket, (struct sockaddr*)&serverAddress, sizeof(serverAddress))) == -1){
+            std::cout << "error in connect\n";
+            return -1;
+        }else{
+            std::cout << "connected\n";
+            connected = true;
+            return 0;
+        }
+    }
+    std::cout << "already connected\n";
+    return 0;
+    
 }
+
 int SenderSocket::send_s(int to_send){
+    if(connected){
+        std::string tos = std::to_string(to_send);
+        const char* message = tos.data();
+        int sended = send(adr_socket, message, strlen(message), 0);
+        if(sended == -1){
+            connected = false; 
+            close(adr_socket);
+            std::cout << "not sended\n";
+        }else{
+            std::cout << "sended: " << message << "\n";
+        }
+            return sended;
 
-    std::string tos = std::to_string(to_send);
-    const char* message = tos.data();
-    auto ms = send(adr_socket, message, strlen(message), 0);
-   // std::cout << "sended: " << message << " in ms: " << ms << "\n"; 
-    close(adr_socket);
-    return ms;
+    }else{
+        return -1;
+    }
 }
-
 SenderSocket::~SenderSocket(){
     
 }
