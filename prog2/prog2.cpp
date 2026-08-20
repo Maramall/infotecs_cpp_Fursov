@@ -8,17 +8,11 @@ ListenSocket server;
     std::string sr = "\0";
     sort_and_replace(sr);
     int con = 0; 
-    bool con_is = true;
-    con = server.l_connect();
-      
-        if(con == -1 && con_is){
-            std::cout << con << "\n";
-            con_is = false;
-        }
+    server.l_connect();
     while(1){
-        if(con != -1){
-            con_is = true;
+
             std::string res = server.listen_s();
+            server.send_OK();
             std::cout << res << "\n";
             if(res.size()){
                 if(more_2_sym_and_32(res)){
@@ -27,8 +21,7 @@ ListenSocket server;
                     std::cout << "error\n";
                 }
             }
-        }
+        
     }
- //   std::cout << sum_elems(sr) << "\n" << sr;
 
 }

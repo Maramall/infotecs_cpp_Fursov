@@ -3,7 +3,8 @@ class SenderSocket : Socket{
     bool connected = false;
     public:
     SenderSocket();
-    int connect_s();
-    int send_s(int to_send);
+    bool connect_s();
+    void disconnect(); 
+    bool send_s(int to_send);
     ~SenderSocket();
 };
